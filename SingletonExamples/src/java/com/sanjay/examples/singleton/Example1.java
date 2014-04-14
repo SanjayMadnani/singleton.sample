@@ -68,10 +68,4 @@ public abstract class Example1 {
 	 */
 	public abstract List<File> getAllFilesFromDefaultDir();
 
-	// TODO Delete
-	public static void main(String[] args) {
-		Example1 w = Example1.getDefaultInstance();
-		System.out.println(w);
-		System.out.println(System.getProperty("os.name"));
-	}
 }
