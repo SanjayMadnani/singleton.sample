@@ -42,5 +42,4 @@ public class DoubleCheckedSingleton {
 		}
 		return instance;
 	}
-
 }

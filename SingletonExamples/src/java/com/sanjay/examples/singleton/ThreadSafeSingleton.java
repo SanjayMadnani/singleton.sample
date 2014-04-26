@@ -18,7 +18,7 @@ package com.sanjay.examples.singleton;
  * @author SANJAY
  */
 public class ThreadSafeSingleton {
-	private static volatile ThreadSafeSingleton instance;
+	private static volatile ThreadSafeSingleton instance; 
 
 	/**
 	 * private Constructor restrict the object creation outside the class.

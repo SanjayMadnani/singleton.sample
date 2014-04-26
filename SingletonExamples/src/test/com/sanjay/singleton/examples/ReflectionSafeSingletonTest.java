@@ -27,7 +27,7 @@ import com.sanjay.examples.singleton.ReflectionSafeSingleton;
 public class ReflectionSafeSingletonTest {
 
 	/**
-	 * Check for singleton.
+	 * Check for singleton. 
 	 */
 	@Test
 	public void testInstance() {
