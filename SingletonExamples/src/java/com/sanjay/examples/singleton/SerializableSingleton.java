@@ -24,13 +24,16 @@ public class SerializableSingleton implements Serializable {
 	 * serialVersionUID.
 	 */
 	private static final long serialVersionUID = 1L;
-	private static volatile SerializableSingleton instance;
 
 	/**
 	 * Constructor: Outside the class object Creation restriction.
 	 */
 	private SerializableSingleton() {
 
+	}
+	
+	private static class SerializableSingletonHelper {
+		private static final SerializableSingleton INSTANCE = new SerializableSingleton(); 
 	}
 
 	/**
@@ -39,13 +42,6 @@ public class SerializableSingleton implements Serializable {
 	 * @return SerializableSingleton instance.
 	 */
 	public static SerializableSingleton getDefaultInstance() {
-		if (instance == null) {
-			synchronized (SerializableSingleton.class) {
-				if (instance == null) {
-					instance = new SerializableSingleton();
-				}
-			}
-		}
-		return instance;
+		return SerializableSingletonHelper.INSTANCE;
 	}
 }
