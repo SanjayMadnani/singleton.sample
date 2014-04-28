@@ -15,6 +15,8 @@ package com.sanjay.examples.singleton;
 import java.io.Serializable;
 
 /**
+ * Serializable Singleton Class with common mistake.
+ * 
  * @author SANJAY
  */
 public class SerializableSingleton implements Serializable {

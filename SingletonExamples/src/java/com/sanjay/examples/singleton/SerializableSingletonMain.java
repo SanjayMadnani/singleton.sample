@@ -20,6 +20,8 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 /**
+ * Test class for SerializableSingleton.
+ * 
  * @author SANJAY
  */
 public class SerializableSingletonMain {
