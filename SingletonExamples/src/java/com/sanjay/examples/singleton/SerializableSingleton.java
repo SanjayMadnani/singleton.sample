@@ -31,9 +31,14 @@ public class SerializableSingleton implements Serializable {
 	private SerializableSingleton() {
 
 	}
-	
+
+	/**
+	 * Inner class as a helper to create singleton Instance.
+	 * 
+	 * @author SANJAY
+	 */
 	private static class SerializableSingletonHelper {
-		private static final SerializableSingleton INSTANCE = new SerializableSingleton(); 
+		private static final SerializableSingleton INSTANCE = new SerializableSingleton();
 	}
 
 	/**
@@ -42,6 +47,15 @@ public class SerializableSingleton implements Serializable {
 	 * @return SerializableSingleton instance.
 	 */
 	public static SerializableSingleton getDefaultInstance() {
+		return SerializableSingletonHelper.INSTANCE;
+	}
+
+	/**
+	 * Prevent singleton violation by deserialization.
+	 * 
+	 * @return Singleton Instance of class at deserialization.
+	 */
+	private Object readResolve() {
 		return SerializableSingletonHelper.INSTANCE;
 	}
 }
